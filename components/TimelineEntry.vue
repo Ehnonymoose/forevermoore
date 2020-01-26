@@ -1,7 +1,7 @@
 <template>
   <v-row align="center">
     <v-col
-      :cols="entry.text ? 2 : 4"
+      :cols="entry.text ? 1 : 4"
       order-0
       :order-sm="dateOrder"
       class="timeline-date-wrapper text-center"
@@ -22,15 +22,25 @@
       v-bind="entryProps"
     >
       <v-card>
-        <v-card-title class="title">{{ entry.title }}</v-card-title>
-        <v-card-text>
-          <v-container>
+        <v-card-text style="padding:4px">
+          <v-container style="padding:4px">
             <v-row>
-              <div v-html="entry.text"></div>
+              <v-col :sm="(entry.photos && entry.photos.length == 1) ? 8 : 12" >
+                <div class="title">{{ entry.title }}</div>
+                <div v-html="entry.text"></div>
+              </v-col>
+
+              <v-col v-if="entry.photos && entry.photos.length == 1" sm="4">
+                <v-img height="120px" :src="entry.photos[0].src" contain @click="showPhoto(entry.photos[0].src)"/>
+              </v-col>
             </v-row>
 
-            <v-row v-if="entry.photos" justify="center">
-              <v-col md="3" v-for="photo in entry.photos" :key="photo.src">
+            <v-row v-if="entry.photos && entry.photos.length > 1" justify="center">
+              <v-col
+                v-for="photo in entry.photos"
+                :key="photo.src"
+                :sm="getPhotoColumns(photo)"
+              >
                 <v-img height="120px" :src="photo.src" contain @click="showPhoto(photo.src)"/>
               </v-col>
             </v-row>
@@ -89,6 +99,10 @@
   border-image:
     linear-gradient(to bottom, #2B6595 0% 50%, rgba(43, 101, 149, 0) 100%) 0 0 0 100%;
 }
+
+.timeline .v-image {
+  cursor: pointer;
+}
 </style>
 
 <script>
@@ -141,7 +155,7 @@ export default {
     },
 
     entryProps() {
-      let cols = this.entry.position === "middle" ? 12 : 9;
+      let cols = this.entry.position === "middle" ? 12 : 10;
       let order = this.entry.position === "left" ? 1 : 0;
       let offset = this.entry.position === "right" ? 1 : 0;
 
@@ -166,6 +180,27 @@ export default {
   methods: {
     showPhoto(id) {
       this.$emit("showPhoto", id);
+    },
+
+    getPhotoColumns(photo) {
+      // If this photo has a set number of columns, use that.
+      if (photo.cols) {
+        return photo.cols;
+      }
+
+      // If it doesn't, figure out how many columns are allocated already for this entry.
+      let unallocatedCols = 12 - this.entry.photos.reduce((total, photo) => total + (photo.cols || 0), 0);
+
+      // Then figure out how many photos the unallocated columns need to split up over.
+      let unsetPhotos = 0;
+      this.entry.photos.forEach(photo => {
+        if (!photo.cols) {
+          unsetPhotos++;
+        }
+      });
+
+      // Now divide up the unallocated space evenly over those columns.
+      return Math.max(1, Math.floor(unallocatedCols / unsetPhotos));
     }
   }
 }
