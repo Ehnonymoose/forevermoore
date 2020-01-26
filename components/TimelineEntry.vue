@@ -31,7 +31,18 @@
               </v-col>
 
               <v-col v-if="entry.photos && entry.photos.length == 1" sm="4">
-                <v-img height="120px" :src="entry.photos[0].src" contain @click="showPhoto(entry.photos[0].src)"/>
+                <v-hover v-slot:default="{ hover }">
+                  <v-img height="120px" :src="entry.photos[0].src" contain @click="showPhoto(entry.photos[0].src)">
+                    <v-fade-transition>
+                      <div
+                        v-if="hover"
+                        class="d-flex transition-fast-in-fast-out white v-card--reveal"
+                        style="height: 100%; opacity: 0.5"
+                      >
+                      </div>
+                    </v-fade-transition>
+                  </v-img>
+                </v-hover>
               </v-col>
             </v-row>
 
@@ -41,7 +52,18 @@
                 :key="photo.src"
                 :sm="getPhotoColumns(photo)"
               >
-                <v-img height="120px" :src="photo.src" contain @click="showPhoto(photo.src)"/>
+                <v-hover v-slot:default="{ hover }">
+                  <v-img height="120px" :src="photo.src" contain @click="showPhoto(photo.src)">
+                    <v-fade-transition>
+                      <div
+                        v-if="hover"
+                        class="d-flex transition-fast-in-fast-out white v-card--reveal"
+                        style="height: 100%; opacity: 0.5"
+                      >
+                      </div>
+                    </v-fade-transition>
+                  </v-img>
+                </v-hover>
               </v-col>
             </v-row>
           </v-container>

@@ -13,6 +13,8 @@
             <p>asdufhasidufhaslidfaisdfa</p>
           </v-col>
 
+          <v-divider vertical />
+
           <v-col cols="12" md="6">
             <div class="text-center">Her Perspective</div>
             <p>asdufhasidufhaslidfaisdfa</p>
