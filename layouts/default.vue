@@ -53,7 +53,7 @@
 <style lang="scss">
 .app-title {
   font-family: $script-font-family;
-  color: $blue;
+  color: $wedding-blue;
   letter-spacing: 1.5px;
   padding-top: 10px;
   margin-bottom: -1rem;
@@ -104,7 +104,7 @@ export default {
         to: "/story"
       }, {
         label: "Wedding Party",
-        to: "/wedding-party"
+        to: "/fellowship-of-the-ring"
       }, {
         label: "Schedule",
         to: "/schedule"

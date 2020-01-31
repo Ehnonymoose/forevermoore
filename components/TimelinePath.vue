@@ -35,7 +35,7 @@
 }
 
 .timeline-path hr {
-  border-top: $path_width solid $blue;
+  border-top: $path_width solid $wedding-blue;
   border-left: none;
   border-right: none;
   border-bottom: none;
@@ -47,7 +47,7 @@
 }
 
 .timeline-path .corner {
-  border: $path_width solid $blue;
+  border: $path_width solid $wedding-blue;
   width: 100%;
   position: relative;
   border-radius: 15px;
@@ -76,7 +76,7 @@
 
 
 .timeline-path .vertical {
-  border-left: $path_width solid $blue;
+  border-left: $path_width solid wedding-;
   position: relative;
   left: calc(50% - 0.5 * #{$path_width});
 }

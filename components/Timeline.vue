@@ -22,22 +22,6 @@
   </v-container>
 </template>
 
-<style>
-.gallery-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.gallery {
-  box-shadow: none;
-  width: 80%;
-  background-color: black;
-}
-</style>
-
 <script>
 import TimelineEntry from "./TimelineEntry";
 import TimelinePath from "./TimelinePath";
@@ -53,7 +37,6 @@ export default {
   },
 
   data: () => ({
-    showGallery: false,
     galleryImageId: null
   }), 
 

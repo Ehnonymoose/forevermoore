@@ -88,7 +88,7 @@
   display: table-cell;
   vertical-align: middle;
 
-  background-color: $green;
+  background-color: $wedding-green;
   color: black;
 
   font-family: $serif-font-family;
@@ -105,7 +105,7 @@
 .timeline-date-wrapper::after {
   content: "";
   position: absolute;
-  border-left: $path_width solid $blue;
+  border-left: $path_width solid $wedding-blue;
   z-index: 1;
   height: 100%;
   top: 0;
@@ -113,7 +113,7 @@
 
 .timeline-date-wrapper.timeline-first::after {
   border-image:
-    linear-gradient(to bottom, rgba(43, 101, 149, 0), $blue 50%) 0 0 0 100%;
+    linear-gradient(to bottom, rgba(43, 101, 149, 0), $wedding-blue 50%) 0 0 0 100%;
 }
 
 .timeline-date-wrapper.timeline-last {
@@ -126,7 +126,7 @@
 
 .timeline-date-wrapper.timeline-last::after {
   border-image:
-    linear-gradient(to bottom, $blue 0% 50%, rgba(43, 101, 149, 0) 100%) 0 0 0 100%;
+    linear-gradient(to bottom, $wedding-blue 0% 50%, rgba(43, 101, 149, 0) 100%) 0 0 0 100%;
 }
 
 .timeline .v-image {

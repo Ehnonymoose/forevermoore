@@ -3,28 +3,40 @@
     <v-row
       v-for="member in party"
       :key="member.name"
+      align="center"
+      class="party-member"
     >
-      <v-col sm="5" xs="12" :order="member.side === 'bride' ? 2 : 1">
-        <v-hover v-if="member.photo" v-slot:default="{ hover }">
+      <v-col sm="5" xs="12" :order-sm="member.side === 'bride' ? 1 : 0">
+        <v-hover v-slot:default="{ hover }">
           <v-img
             :src="'/images/wedding-party/' + (hover ? member.altPhoto : member.photo)"
-            height="400px"
+            height="300px"
             contain
           />
         </v-hover>
-            
-        <div v-else style="height: 400px; width: 400px; background-color: lightgrey">
-          {{ member.name }}
-        </div>
       </v-col>
 
-      <v-col sm="7" xs="12" :order="member.side === 'bride' ? 1 : 2">
-        <span class="party-name">{{ member.position }}: {{ member.name }}</span>
+      <v-col sm="7" xs="12" :order-sm="member.side === 'bride' ? 0 : 1">
+        <div class="party-name">{{ member.position }}: {{ member.name }}</div>
         <div v-html="member.intro" />
       </v-col>
     </v-row>
   </div>
 </template>
+
+<style lang="scss">
+.party-name {
+  font-family: $serif-font-family;
+  color: $wedding-blue;
+  font-variant: small-caps;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.party-member {
+  min-height: 360px;
+}
+</style>
 
 <script>
 export default {
@@ -33,7 +45,9 @@ export default {
       side: "bride",
       position: "Man of Honor",
       name: "Nick van Aartsen",
-      intro: "He's a pretty cool guy."
+      intro: "Check back soon!",
+      photo: "nick.jpg",
+      altPhoto: "nick-silly.jpg"
     }, {
       side: "groom",
       position: "Best Woman",
@@ -45,17 +59,23 @@ export default {
       side: "bride",
       position: "Bridesmaid",
       name: "Taarika Babu",
-      intro: "She's nice."
+      intro: "My favorite memory of Christine is when I realized that we were going to be lifelong friends! I was a huge anime nerd in high school but had to build up the courage to join the anime club because I didn’t want to be judged. About a month into my freshman year I finally built up the courage to go to a meeting. Christine was one of the first people I saw when I walked in the room. We had a few classes together but hadn’t really talked much outside of pleasantries. Seeing her there instantly put me at ease because I thought she was completely normal (big mistake :P) so I sat next to her and we finally started talking. We became friends pretty much instantly after that anime club meeting and it’s now 15 years later and I can’t believe that I am going to be there to watch her get married 😊",
+      photo: "taarika.jpg",
+      altPhoto: "taarika-silly.jpg"
     }, {
       side: "groom",
       position: "Groomsman",
       name: "Chris Ferguson",
-      intro: "He's cool."
+      intro: "<p>A dread chthonic beast cunningly disguised as an irrepressibly-cheerful, kindhearted dude, Chris first showed his lack of good judgment by agreeing to be my roommate for our sophomore and junior years in college. Somehow we came out of that experience still friends, and have even managed to stay more-or-less in touch in the years since!</p><p>He\'s the one who introduced me to Magic (so, uh, thanks?), along with Euchre, Dominion, and more other games than I can count. Chris is also the my go-to source of recommendations for books, music, and TV, as well as a font of neat obscure facts and awful jokes. Despite his true nature, he\'s a swell guy.</p>",
+      photo: "chris.jpg",
+      altPhoto: "chris-silly.jpg"
     }, {
       side: "bride",
       position: "Bridesmaid",
       name: "Garima Batra",
-      intro: "He's a pretty cool guy."
+      intro: "Check back soon!",
+      photo: "garima.jpg",
+      altPhoto: "garima-silly.jpg"
     }, {
       side: "groom",
       position: "Groomsman",
@@ -74,7 +94,7 @@ export default {
       side: "groom",
       position: "Groomsman",
       name: "Taylor Parsons",
-      intro: "Sabreen is so cool that she's my Best Man despite not, in fact, being a man.",
+      intro: "<p>The first time I really hung out with Taylor, we went to a ninja warrior gym, so things definitely got off on the right foot. We've been on trips together to at least nine different states, for climbing, snowboarding, roller coasters, family, and climbing (again). Someday we'll go snowboarding again. 😛</p><p>There have been some weird coincidences connecting us. My parents randomly moved from eastern WA all the way to NC, and ended up across the street from the house he grew up in. Then it turns out that Christine has been a good friend of his now-wife Sharon for a good 20+ years. When we move to Seattle we'll probably end up next door to his cousin or something.</p><p>He is now a professional soap salesman, and is <em>definitely</em> not an alias of Tyler Durden.</p>",
       photo: "taylor.jpg",
       altPhoto: "taylor-silly.jpg"
     }, {
@@ -88,12 +108,16 @@ export default {
       side: "groom",
       position: "Groomsman",
       name: "Matt Vermillion",
-      intro: "Sabreen is so cool that she's my Best Man despite not, in fact, being a man."
+      intro: "<p>When I first moved to Maryland, I didn't  know anybody within a thousand miles, so I just went to the climbing gym four or five (or six) times a week. But it was okay, because before long Matt, like Sabreen before him, adopted me!</p><p>He took me on my very first outdoor climbing trip, where I learned advanced techniques like \"belaying from a hammock\" and \"cleaning in the rain without dying (barely)\". Also, a scary bearded man emerged from the woods one night and yelled at us.</p><p>We fell a little out of touch when he moved to Colorado for PT school, but, uniquely among climbers who go to Colorado, Matt actually came back! We're both busy but I still sometimes get to hang out with him and his numerous dogs.</p>",
+      photo: "matt.jpg",
+      altPhoto: "matt-silly.jpg"
     }, {
       side: "bride",
       position: "Bridesmaid",
       name: "Mia Tang-Huang",
-      intro: "He's a pretty cool guy."
+      intro: "Check back soon!",
+      photo: "mia.jpg",
+      altPhoto: "mia.jpg"
     }]
   })
 }
