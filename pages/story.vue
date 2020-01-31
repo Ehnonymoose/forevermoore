@@ -17,7 +17,7 @@ export default {
       text: "<p>We met at a dinner party hosted by a mutual friend (hi, Pat!). Dan knew him through rock climbing; Christine had lived in the same house in college.</p><p>We had a very nice dinner before going to the Gymkana home show; for both, we each subtly tried to make sure we were sitting next to each other.</p>",
       position: "left"
     }, {
-      date: "Jung 2017",
+      date: "June 2017",
       title: "First Dates",
       text: "<p>Our first dates! Rock climbing, naturally.</p><p>Dan didn't realize these were actually dates until after the third one.</p><p>This guy...</p>",
       position: "right",

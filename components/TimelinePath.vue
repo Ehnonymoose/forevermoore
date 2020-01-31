@@ -27,7 +27,7 @@
   </v-row>
 </template>
 
-<style>
+<style lang="scss">
 .timeline-path div {
   padding: 0;
   height: 40px;
@@ -35,52 +35,50 @@
 }
 
 .timeline-path hr {
-  border-top: 3px solid #2B6595;
+  border-top: $path_width solid $blue;
   border-left: none;
   border-right: none;
   border-bottom: none;
 
   margin: 0;
-  top: 17px;
+  top: 20px - $path_width;
   position: relative;
-
-  /* Make the rule a little longer so there aren't gaps */
-  width: calc(100% + 5px);
+  width: 100%;
 }
 
 .timeline-path .corner {
-  border: 3px solid #2B6595;
+  border: $path_width solid $blue;
   width: 100%;
   position: relative;
   border-radius: 15px;
 }
 
 .timeline-path .bottom-left {
-  left: calc(50% - 1.5px);
+  left: calc(50% - 0.5 * #{$path_width});
   top: -50%;
 }
 
 .timeline-path .bottom-right {
-  left: calc(-50% + 1.5px);
+  left: calc(-50% + 0.5 * #{$path_width});
   top: -50%;
 }
 
 .timeline-path .top-right {
-  left: calc(-50% + 1.5px);
-  top: calc(50% - 3px);
+  left: calc(-50% + 0.5 * #{$path_width});
+  top: calc(50% - #{$path_width});
 }
 
 
 .timeline-path .top-left {
-  left: calc(50% - 1.5px);
-  top: calc(50% - 3px);
+  left: calc(50% - #{0.5 * $path_width});
+  top: calc(50% - #{$path_width});
 }
 
 
 .timeline-path .vertical {
-  border-left: 3px solid #2B6595;
+  border-left: $path_width solid $blue;
   position: relative;
-  left: calc(50% - 1.5px);
+  left: calc(50% - 0.5 * #{$path_width});
 }
 </style>
 

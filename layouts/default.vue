@@ -53,14 +53,14 @@
 <style lang="scss">
 .app-title {
   font-family: $script-font-family;
-  color: #2B6595;
+  color: $blue;
   letter-spacing: 1.5px;
   padding-top: 10px;
   margin-bottom: -1rem;
 }
 
 .nav-item {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: $serif-font-family;
   text-transform: uppercase;
   font-size: 0.6rem;
 }
@@ -79,6 +79,16 @@
   .app-title {
     font-size: 30pt;
   }
+}
+
+@font-face {
+  font-family: "Savoye LET";
+  src: url("//db.onlinewebfonts.com/t/005369b1bccd49c6f752348e3261eec3.eot");
+  src: url("//db.onlinewebfonts.com/t/005369b1bccd49c6f752348e3261eec3.eot?#iefix") format("embedded-opentype"),
+       url("//db.onlinewebfonts.com/t/005369b1bccd49c6f752348e3261eec3.woff2") format("woff2"),
+       url("//db.onlinewebfonts.com/t/005369b1bccd49c6f752348e3261eec3.woff") format("woff"),
+       url("//db.onlinewebfonts.com/t/005369b1bccd49c6f752348e3261eec3.ttf") format("truetype"),
+       url("//db.onlinewebfonts.com/t/005369b1bccd49c6f752348e3261eec3.svg#Savoye LET") format("svg");
 }
 </style>
 

@@ -26,7 +26,7 @@
           <v-container style="padding:4px">
             <v-row>
               <v-col :sm="(entry.photos && entry.photos.length == 1) ? 8 : 12" >
-                <div class="title">{{ entry.title }}</div>
+                <div class="entry-title">{{ entry.title }}</div>
                 <div v-html="entry.text"></div>
               </v-col>
 
@@ -73,18 +73,25 @@
   </v-row>
 </template>
 
-<style>
+<style lang="scss">
+.timeline .entry-title {
+  font-family: $script-font-family !important;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
 .timeline-date {
   z-index: 2;
-  padding: 10px;
-  border-radius: 25px;
+  padding: 5px;
+  border-radius: 20px;
 
   display: table-cell;
   vertical-align: middle;
 
-  font-weight: bold;
-  background-color: #a2bd7c;
+  background-color: $green;
   color: black;
+
+  font-family: $serif-font-family;
 }
 
 .timeline-date-wrapper {
@@ -98,7 +105,7 @@
 .timeline-date-wrapper::after {
   content: "";
   position: absolute;
-  border-left: 3px solid #2B6595;
+  border-left: $path_width solid $blue;
   z-index: 1;
   height: 100%;
   top: 0;
@@ -106,7 +113,7 @@
 
 .timeline-date-wrapper.timeline-first::after {
   border-image:
-    linear-gradient(to bottom, rgba(43, 101, 149, 0), #2B6595 50%) 0 0 0 100%;
+    linear-gradient(to bottom, rgba(43, 101, 149, 0), $blue 50%) 0 0 0 100%;
 }
 
 .timeline-date-wrapper.timeline-last {
@@ -119,7 +126,7 @@
 
 .timeline-date-wrapper.timeline-last::after {
   border-image:
-    linear-gradient(to bottom, #2B6595 0% 50%, rgba(43, 101, 149, 0) 100%) 0 0 0 100%;
+    linear-gradient(to bottom, $blue 0% 50%, rgba(43, 101, 149, 0) 100%) 0 0 0 100%;
 }
 
 .timeline .v-image {
