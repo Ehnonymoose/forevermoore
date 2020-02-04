@@ -14,11 +14,13 @@
     <TimelineEntry last :entry="entries[entries.length - 1]" @showPhoto="showPhoto" />
 
     <!-- Build a lightbox containing a carousel with all of the photos. -->
-    <v-gallery
-      :images="allPhotos.map(photo => photo.src)"
-      :index="galleryImageId"
-      @close="galleryImageId = null"
-    />
+    <client-only>
+      <v-gallery
+        :images="allPhotos"
+        :index="galleryImageId"
+        @close="galleryImageId = null"
+      />
+    </client-only>
   </v-container>
 </template>
 
@@ -49,7 +51,7 @@ export default {
 
   methods: {
     showPhoto(path) {
-      this.galleryImageId = this.allPhotos.findIndex(photo => photo.src === path);
+      this.galleryImageId = this.allPhotos.findIndex(photo => photo.href === path);
     }
   }
 }

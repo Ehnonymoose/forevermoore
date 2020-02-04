@@ -76,7 +76,7 @@
 
 
 .timeline-path .vertical {
-  border-left: $path_width solid wedding-;
+  border-left: $path_width solid $wedding-blue;
   position: relative;
   left: calc(50% - 0.5 * #{$path_width});
 }

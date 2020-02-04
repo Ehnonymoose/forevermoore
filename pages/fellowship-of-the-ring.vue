@@ -45,7 +45,7 @@ export default {
       side: "bride",
       position: "Man of Honor",
       name: "Nick van Aartsen",
-      intro: "Check back soon!",
+      intro: "<p>Originally just in it for the homemade muffins and beignets, Nick soon realized Christine was an amazing friend as well. At first they bonded over rock climbing, but Christine kept things more interesting and was soon showing him flying trapeze and even a pole dance move or two. Nick would do his best to keep up through all of this.</p><p>On more restful days, the two have enjoyed a particular love for ice creams, cajun food, and board game nights. On slightly less restful days they have also enjoyed scenic hiking routes, including a sunrise trek up old rag. Later, Christine would bring Nick to Mexico to visit their friend Garima and tour ancient pyramids. He was also introduced to Hot Nuts® and micheladas, a transformational experience.</p><p>Nick is incredibly excited for Christine and Dan, and looking forward to visiting them in Seattle.</p>",
       photo: "nick.jpg",
       altPhoto: "nick-silly.jpg"
     }, {
@@ -115,9 +115,9 @@ export default {
       side: "bride",
       position: "Bridesmaid",
       name: "Mia Tang-Huang",
-      intro: "Check back soon!",
-      photo: "mia.jpg",
-      altPhoto: "mia.jpg"
+      intro: "Hi, I am Mia! I am Christine's sister-in-law. I was so happy to have another sister after moving to the U.S. It was very hard leaving my three older sisters who still live in Taiwan. Christine was very welcoming when I first arrived and helped me make America feel like a second home. Christine has been very generous towards our family, especially to my son Jonathan. Christine has gifted us countless things such as cribs, a baby shower, hand-sewn blankets, and many many toys. I am so lucky to have Christine as a sister and so happy to have Dan in our family too!",
+      photo: "mia.png",
+      altPhoto: "mia-silly.png"
     }]
   })
 }

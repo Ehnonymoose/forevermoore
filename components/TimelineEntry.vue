@@ -22,17 +22,17 @@
       v-bind="entryProps"
     >
       <v-card>
-        <v-card-text style="padding:4px">
-          <v-container style="padding:4px">
-            <v-row>
-              <v-col :sm="(entry.photos && entry.photos.length == 1) ? 8 : 12" >
-                <div class="entry-title">{{ entry.title }}</div>
-                <div v-html="entry.text"></div>
+        <v-card-text class="py-2 px-4">
+          <v-container class="pa-0">
+            <v-row :align="entry.photos && entry.photos.length == 1 ? 'center' : null">
+              <v-col :sm="(entry.photos && entry.photos.length == 1) ? 8 : 12">
+                <div class="entry-title mb-3">{{ entry.title }}</div>
+                <div class="entry-text" v-html="entry.text"></div>
               </v-col>
 
               <v-col v-if="entry.photos && entry.photos.length == 1" sm="4">
                 <v-hover v-slot:default="{ hover }">
-                  <v-img height="120px" :src="entry.photos[0].src" contain @click="showPhoto(entry.photos[0].src)">
+                  <v-img height="120px" :src="entry.photos[0].href" contain @click="showPhoto(entry.photos[0].href)">
                     <v-fade-transition>
                       <div
                         v-if="hover"
@@ -49,11 +49,11 @@
             <v-row v-if="entry.photos && entry.photos.length > 1" justify="center">
               <v-col
                 v-for="photo in entry.photos"
-                :key="photo.src"
+                :key="photo.href"
                 :sm="getPhotoColumns(photo)"
               >
                 <v-hover v-slot:default="{ hover }">
-                  <v-img height="120px" :src="photo.src" contain @click="showPhoto(photo.src)">
+                  <v-img height="120px" :src="photo.href" contain @click="showPhoto(photo.href)">
                     <v-fade-transition>
                       <div
                         v-if="hover"
@@ -75,9 +75,11 @@
 
 <style lang="scss">
 .timeline .entry-title {
-  font-family: $script-font-family !important;
-  font-size: 2rem;
+  font-family: $sans-serif-font !important;
+  font-size: 1.3rem;
   font-weight: 400;
+  font-variant: small-caps;
+  color: $wedding-blue;
 }
 
 .timeline-date {
@@ -91,7 +93,9 @@
   background-color: $wedding-green;
   color: black;
 
-  font-family: $serif-font-family;
+  font-family: $sans-serif-font;
+  text-transform: uppercase;
+  font-size: 0.8rem;
 }
 
 .timeline-date-wrapper {
@@ -131,6 +135,11 @@
 
 .timeline .v-image {
   cursor: pointer;
+}
+
+.timeline .entry-text {
+  font-family: $sans-serif-font;
+  font-size: 0.9rem;
 }
 </style>
 

@@ -27,17 +27,34 @@
 
       <template v-slot:extension>
         <div class="hidden-sm-and-down mx-auto mt-2">
-          <v-btn 
-            v-for="link in links"
-            :key="link.label"
-            text
-            tile
-            nuxt
-            :href="link.to"
-            class="nav-item"
-          >
-          {{ link.label }} 
-          </v-btn>
+          <template v-for="link in links">
+            <v-tooltip bottom v-if="link.soon" :key="link.label">
+              <template v-slot:activator="{ on }">
+                <v-btn 
+                  :key="link.label"
+                  text
+                  tile
+                  class="nav-item coming-soon"
+                  v-on="on"
+                >
+                {{ link.label }} 
+                </v-btn>
+              </template>
+                <span>Coming soon!</span>
+            </v-tooltip>
+
+            <v-btn 
+              v-else
+              :key="link.label"
+              text
+              tile
+              nuxt
+              :href="link.to"
+              class="nav-item"
+            >
+            {{ link.label }} 
+            </v-btn>
+          </template>
         </div>
       </template>
     </v-app-bar>
@@ -63,6 +80,10 @@
   font-family: $serif-font-family;
   text-transform: uppercase;
   font-size: 0.6rem;
+
+  &.coming-soon {
+    color: rgba(0, 0, 0, 0.26) !important;
+  }
 }
 
 .menu-button {
@@ -106,14 +127,16 @@ export default {
         label: "Wedding Party",
         to: "/fellowship-of-the-ring"
       }, {
-        label: "Schedule",
-        to: "/schedule"
-      }, {
-        label: "Travel",
-        to: "/travel"
+        label: "Logistics",
+        to: "/logistics"
       }, {
         label: "RSVP",
-        to: "/rsvp"
+        to: "/rsvp",
+        soon: true
+      }, {
+        label: "Registry",
+        to: "/registry",
+        soon: true
       }]
     }
   }
