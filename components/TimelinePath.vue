@@ -2,25 +2,30 @@
   <v-row class="timeline-path">
     <!-- We will always need at least one vertical bar to connect to the last entry. -->
     <v-col 
-      class="d-none d-sm-flex" 
+      :class="xsClasses" 
       :cols="start.position === 'middle' ? 2 : 1"
-      :offset-sm="leftCornerOffset"
+      :offset="leftCornerOffset"
     >
       <div :class="leftCornerClasses"></div>
     </v-col>
 
-    <v-col cols="1" class="hidden-sm-and-up">
+    <v-col cols="1" :class="{
+        'hidden-sm-and-up': true,
+        'd-none': !this.neitherMiddle
+      }"
+    >
       <div class="vertical"></div>
     </v-col>
 
     <!-- If the entries we're connecting have different positions, we'll need a horizontal bar to connect them. -->
     <template v-if="start.position !== end.position">
-      <v-col :cols="horizontalPathCols" class="d-none d-sm-flex">
+      <v-col :cols="horizontalPathCols" :class="xsClasses"
+      >
         <hr />
       </v-col>
 
       <!-- We'll also need a second vertical bar to connect to the next entry. -->
-      <v-col :cols="end.position === 'middle' ? 2 : 1" class="d-none d-sm-flex">
+      <v-col :cols="end.position === 'middle' ? 2 : 1" :class="xsClasses">
         <div :class="rightCornerClasses"></div>
       </v-col>
     </template>
@@ -90,6 +95,17 @@ export default {
   },
 
   computed: {
+    neitherMiddle() {
+      return this.start.position !== 'middle' && this.end.position != 'middle';
+    },
+
+    xsClasses() {
+      return {
+        'd-none': this.neitherMiddle,
+        'd-sm-flex': this.neitherMiddle
+      }
+    },
+
     leftCornerOffset() {
       if (this.start.position === 'middle') {
         return 5;

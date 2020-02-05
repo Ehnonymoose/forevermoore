@@ -171,7 +171,7 @@ export default {
         if (this.entry.text) {
           classes.push("offset-sm-5");
         } else {
-          classes.push("offset-sm-4");
+          classes.push("offset-4");
         }
       }
 
