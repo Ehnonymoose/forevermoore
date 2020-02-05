@@ -9,7 +9,7 @@
       <v-col sm="5" xs="12" :order-sm="member.side === 'bride' ? 1 : 0">
         <v-hover v-slot:default="{ hover }">
           <v-img
-            :src="'/images/wedding-party/' + (hover ? member.altPhoto : member.photo)"
+            :src="require(`static/images/wedding-party/${ hover ? member.altPhoto : member.photo }?vuetify-preload`)"
             height="300px"
             contain
           />
@@ -122,8 +122,8 @@ export default {
       position: "Bridesmaid",
       name: "Mia Tang-Huang",
       intro: "Hi, I am Mia! I am Christine's sister-in-law. I was so happy to have another sister after moving to the U.S. It was very hard leaving my three older sisters who still live in Taiwan. Christine was very welcoming when I first arrived and helped me make America feel like a second home. Christine has been very generous towards our family, especially to my son Jonathan. Christine has gifted us countless things such as cribs, a baby shower, hand-sewn blankets, and many many toys. I am so lucky to have Christine as a sister and so happy to have Dan in our family too!",
-      photo: "mia.png",
-      altPhoto: "mia-silly.png"
+      photo: "mia.jpg",
+      altPhoto: "mia-silly.jpg"
     }]
   })
 }
