@@ -40,6 +40,12 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Our Favorite Folks"
+    }
+  },
+
   data: () => ({
     party: [{
       side: "bride",

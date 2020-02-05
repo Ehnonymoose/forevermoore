@@ -78,3 +78,11 @@
 
 }
 </style>
+
+<script>
+export default {
+  head: () => ({
+    title: "Where to Be"
+  })
+}
+</script>

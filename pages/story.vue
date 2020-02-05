@@ -10,6 +10,10 @@ export default {
     Timeline
   },
 
+  head: () => ({
+    title: "Our Story"
+  }),
+
   data: () => ({
     timeline: [{
       date: "Apr 2017",
