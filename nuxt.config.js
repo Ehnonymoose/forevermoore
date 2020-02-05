@@ -12,8 +12,11 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
+
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/png', sizes:"16x16", href: '/favicon-16x16.png' },
+      { rel: 'icon', type: 'image/png', sizes:"32x32", href: '/favicon-32x32.png' },
+      { rel: 'manifest', href: '/site.webmanifest' }
     ]
   },
   /*
