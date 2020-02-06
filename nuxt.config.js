@@ -34,28 +34,31 @@ export default {
   plugins: [
     '~plugins/lightbox.client.js'
   ],
+
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/vuetify',
+    '@nuxtjs/vuetify'
   ],
+
   /*
   ** Nuxt.js modules
   */
   modules: [
   ],
+
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
   */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    treeShake: {
-      loaderOptions: {
-        progressiveImages: true
-      }
-    },
+    // treeShake: {
+    //   loaderOptions: {
+    //     progressiveImages: true
+    //   }
+    // },
     defaultAssets: {
       font: {
         family: 'Lato'
@@ -67,6 +70,14 @@ export default {
   ** Build configuration
   */
   build: {
-    extractCSS: true
+    extractCSS: (process.env.NODE_ENV === 'production')
+  },
+
+  serverMiddleware: [
+    { path: "/api/login", handler: "~/api/auth.js"}
+  ],
+
+  router: {
+    middleware: ['auth']
   }
 }

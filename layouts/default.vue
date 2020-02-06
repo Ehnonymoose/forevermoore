@@ -1,9 +1,9 @@
 <template>
   <v-app light>
-    <Navbar />
+    <Navbar v-if="$store.state.loggedIn" />
 
     <v-content>
-      <v-container>
+      <v-container class="fill-height" style="position: relative;">
         <nuxt />
       </v-container>
     </v-content>
