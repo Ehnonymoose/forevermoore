@@ -12,11 +12,7 @@
   },
   "dependencies": {
     "nuxt": "^2.0.0",
-    "vlightbox": "^2.0.2",
-    "vue-easy-lightbox": "^0.9.0",
-    "vue-gallery": "^2.0.1",
-    "vue-litebox": "^1.0.2",
-    "vue-silentbox": "^0.1.9"
+    "vue-gallery": "^2.0.1"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.0.0",

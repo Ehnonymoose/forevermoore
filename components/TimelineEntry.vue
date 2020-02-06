@@ -32,7 +32,7 @@
 
               <v-col v-if="entry.photos && entry.photos.length == 1" sm="4">
                 <v-hover v-slot:default="{ hover }">
-                  <v-img height="120px" :src="entry.photos[0].href" contain @click="showPhoto(entry.photos[0].href)">
+                  <v-img height="120px" :src="entry.photos[0].href" contain eager @click="showPhoto(entry.photos[0].href)">
                     <v-fade-transition>
                       <div
                         v-if="hover"
@@ -53,7 +53,7 @@
                 :sm="getPhotoColumns(photo)"
               >
                 <v-hover v-slot:default="{ hover }">
-                  <v-img height="120px" :src="photo.href" contain @click="showPhoto(photo.href)">
+                  <v-img height="120px" :src="photo.href" contain eager @click="showPhoto(photo.href)">
                     <v-fade-transition>
                       <div
                         v-if="hover"
