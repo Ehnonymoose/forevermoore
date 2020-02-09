@@ -51,7 +51,11 @@
 
 
     <v-row class="mt-5">
-      <v-col cols="12" sm="6" offset-sm="3">
+      <v-col order="1" order-sm="0" cols="12" sm="6">
+        <v-img src="images/wedding-logo.png" height="200px" contain/>
+      </v-col>
+
+      <v-col order="0" order-sm="1" cols="12" sm="6">
         <div class="travel-header text-center mb-2">Child Care</div>
         <p>
           In order to allow all guests, including parents, an evening of relaxation, we have chosen for our wedding day to be an adults-only occasion.
@@ -60,6 +64,9 @@
           We understand that this may be inconvenient for some of you, particularly those that are traveling to be here, and are exploring options for childcare nearby.
         </p>
       </v-col>
+    </v-row>
+
+    <v-row align="center" justify="center">
     </v-row>
   </div>
 </template>

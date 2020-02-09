@@ -24,7 +24,7 @@
         </v-col>
 
         <v-col cols="10" offset-sm="1" class="app-title text-center">
-          Daniel &amp; Christine
+          Daniel <span style="font-size: 0.7em">&amp;</span> Christine
         </v-col>
       </v-row>
 
@@ -74,6 +74,9 @@
   left: 0;
   z-index: 99999;
   width: 100%;
+
+  background-image: url("/images/header.png");
+  background-size: cover;
 }
 
 .app-title {
