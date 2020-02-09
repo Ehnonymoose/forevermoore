@@ -52,7 +52,7 @@
 
     <v-row class="mt-5">
       <v-col order="1" order-sm="0" cols="12" sm="6">
-        <v-img src="images/wedding-logo.png" height="200px" contain/>
+        <v-img src="/images/wedding-logo.png" height="200px" contain/>
       </v-col>
 
       <v-col order="0" order-sm="1" cols="12" sm="6">

@@ -24,7 +24,7 @@
 
     <v-row align="center" justify="center">
       <v-col>
-        <v-img src="images/wedding-logo.png" height="200px" contain/>
+        <v-img src="/images/wedding-logo.png" height="200px" contain/>
       </v-col>
     </v-row>
   </div>
