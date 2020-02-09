@@ -48,6 +48,19 @@
         </div>
       </v-col>
     </v-row>
+
+
+    <v-row class="mt-5">
+      <v-col cols="12" sm="6" offset-sm="3">
+        <div class="travel-header text-center mb-2">Child Care</div>
+        <p>
+          In order to allow all guests, including parents, an evening of relaxation, we have chosen for our wedding day to be an adults-only occasion.
+        </p>
+        <p>
+          We understand that this may be inconvenient for some of you, particularly those that are traveling to be here, and are exploring options for childcare nearby.
+        </p>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
