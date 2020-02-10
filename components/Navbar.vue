@@ -137,8 +137,7 @@ export default {
         to: "/logistics"
       }, {
         label: "RSVP",
-        to: "/rsvp",
-        soon: true
+        to: "/rsvp"
       }, {
         label: "Registry",
         to: "/registry",
