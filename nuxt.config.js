@@ -17,6 +17,11 @@ export default {
       { rel: 'icon', type: 'image/png', sizes:"16x16", href: '/favicon-16x16.png' },
       { rel: 'icon', type: 'image/png', sizes:"32x32", href: '/favicon-32x32.png' },
       { rel: 'manifest', href: '/site.webmanifest' }
+    ],
+
+    script: [
+      { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=UA-158161365-1' },
+      { src: 'analytics.js' }
     ]
   },
   /*
@@ -67,6 +72,6 @@ export default {
   ** Build configuration
   */
   build: {
-    extractCSS: true
+    extractCSS: (process.env.NODE_ENV === 'production')
   }
 }
