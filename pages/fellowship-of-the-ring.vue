@@ -6,7 +6,7 @@
       align="center"
       class="party-member"
     >
-      <v-col sm="5" xs="12" :order-sm="member.side === 'bride' ? 1 : 0">
+      <v-col sm="5" cols="12" :order-sm="member.side === 'bride' ? 1 : 0">
         <v-hover v-slot:default="{ hover }">
           <v-img
             :src="require(`static/images/wedding-party/${ hover ? member.altPhoto : member.photo }?vuetify-preload`)"
@@ -16,7 +16,7 @@
         </v-hover>
       </v-col>
 
-      <v-col sm="7" xs="12" :order-sm="member.side === 'bride' ? 0 : 1">
+      <v-col sm="7" cols="12" :order-sm="member.side === 'bride' ? 0 : 1">
         <div class="party-name">{{ member.position }}: {{ member.name }}</div>
         <div v-html="member.intro" />
       </v-col>

@@ -3,7 +3,7 @@
     <Navbar />
 
     <v-content>
-      <v-container fill-height>
+      <v-container>
         <nuxt />
       </v-container>
     </v-content>
