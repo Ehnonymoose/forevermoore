@@ -28,7 +28,7 @@
         </v-col>
       </v-row>
 
-      <div class="row hidden-xs-only pb-0 justify-center nav-item-row">
+      <v-row class="hidden-xs-only pb-0 justify-center nav-item-row">
         <template v-for="link in links">
           <div :key="link.label" class="pb-0">
             <v-tooltip bottom v-if="link.soon" >
@@ -61,7 +61,19 @@
             </v-btn>
           </div>
         </template>
-      </div>
+      </v-row>
+
+      <v-expand-transition>
+        <v-row v-if="showCovidWarning" class="covid-warning mt-1">
+          <v-col cols="12" sm="10" offset-sm="1" align="center" class="py-1">
+            The COVID-19 pandemic has made planning ahead difficult, but it seems likely that things will have calmed down by August, so we're still planning on holding the wedding on August 2. Hope to see you then!
+          </v-col>
+          <v-spacer />
+          <v-btn text v-on:click="hideCovidWarning" height="auto">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </v-row>
+      </v-expand-transition>
     </v-container>
   </v-sheet>
 </template>
@@ -105,6 +117,10 @@
   position: fixed;
 }
 
+.covid-warning {
+  background-color: #f0cf759f;
+}
+
 @media (min-width: 600px) {
   .app-title {
     font-size: 40pt;
@@ -123,6 +139,8 @@
 export default {
   data () {
     return {
+      showCovidWarning: true,
+
       links: [{
         label: "Home",
         to: "/"
@@ -140,9 +158,24 @@ export default {
         to: "/rsvp"
       }, {
         label: "Registry",
-        to: "/registry",
-        soon: true
+        to: "/registry"
       }]
+    }
+  },
+
+  methods: {
+    hideCovidWarning() {
+      this.showCovidWarning = false;
+      localStorage.showCovidWarning = false;
+    }
+  },
+
+  mounted() {
+    // localStorage stores things as strings, so we don't need to worry about this being the boolean value `false`.
+    if (localStorage.showCovidWarning) {
+      this.showCovidWarning = (localStorage.showCovidWarning == "true");
+    } else {
+      this.showCovidWarning = true;
     }
   }
 }
