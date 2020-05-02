@@ -41,11 +41,17 @@
         </p>
       </v-col>
 
-      <v-col cols="12" sm="4" offset-sm="2">
+      <v-col cols="12" sm="6" offset-sm="1">
         <div class="travel-header text-center my-2">Hotels</div>
-        <div>
-          We are working on setting up hotel blocks. Check back soon!
-        </div>
+        <p>
+          We have set up a hotel block with the <a href="https://www.clarioninnleesburg.com/">Clarion Hotel Leesburg</a> (&#9733;&#9733;&#9733;). It is a five-minute drive from the wedding venue, and has a complimentary airport shuttle. 
+        </p>
+        <p>
+          <a href="https://www.lansdowneresort.com/">Lansdowne Resort and Spa</a> (&#9733;&#9733;&#9733;&#9733;) is a more luxurious option. After requesting a hotel block, we concluded that internet bookings are the best way to get a competitive rate!
+        </p>
+        <p>
+          Other options for discounted rates <a href="https://www.hotelplanner.com/15014156/EventPage5841953">are available here</a>. There are also some cute options on <a href="https://www.airbnb.com/s/Leesburg--VA--United-States/homes?tab_id=all_tab&refinement_paths%5B%5D=%2Fhomes&query=Leesburg%2C%20VA&place_id=ChIJuzk71YM9tokR873541YPkrE&checkin=2020-08-01&checkout=2020-08-03&adults=2">AirBnB</a> (but book soon, these seem to disappear quickly).
+        </p>
       </v-col>
     </v-row>
 
@@ -56,12 +62,14 @@
       </v-col>
 
       <v-col order="0" order-sm="1" cols="12" sm="6">
-        <div class="travel-header text-center mb-2">Child Care</div>
+        <div class="travel-header text-center mb-2">FAQ</div>
+        children?
         <p>
           In order to allow all guests, including parents, an evening of relaxation, we have chosen for our wedding day to be an adults-only occasion.
         </p>
+        dress code?
         <p>
-          We understand that this may be inconvenient for some of you, particularly those that are traveling to be here, and are exploring options for childcare nearby.
+          pants
         </p>
       </v-col>
     </v-row>
