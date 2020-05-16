@@ -66,7 +66,7 @@
       <v-expand-transition>
         <v-row v-if="showCovidWarning" class="covid-warning mt-1">
           <div style="width: calc(100% - 84px)" class="d-inline-block my-3 ml-5"> 
-            The COVID-19 pandemic has made planning ahead difficult, but it seems likely that things will have calmed down by August, so we're still planning on holding the wedding on August 2. Hope to see you then!
+            COVID-19 certainly complicates things, but we are doing everything we can to ensure our wedding will be safe and comfortable for everyone. We still hope to celebrate on August 2nd, but will update you if anything changes.
           </div>
 
           <v-btn text v-on:click="hideCovidWarning" height="auto" width="40px" class="d-inline-block">
