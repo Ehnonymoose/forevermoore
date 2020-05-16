@@ -69,8 +69,8 @@
         </div>
 
         <div class="text-center mt-5">
-          <div class="d-inline-flex align-center" style="margin-bottom: 10px"><b>Airbnb</b>&nbsp;-&nbsp;<img src="images/airbnb.svg" height="24px"></img></div><br>
-          There are also some cute options on <a href="https://www.airbnb.com/s/Leesburg--VA--United-States/homes?tab_id=all_tab&refinement_paths%5B%5D=%2Fhomes&query=Leesburg%2C%20VA&place_id=ChIJuzk71YM9tokR873541YPkrE&checkin=2020-08-01&checkout=2020-08-03&adults=2">AirBnB</a> (but book soon, these seem to disappear quickly).
+          <div class="d-inline-flex align-center" style="margin-bottom: 10px"><b>Airbnb</b>&nbsp;-&nbsp;<img src="/images/airbnb.svg" height="24px"></img></div><br>
+          There are also some cute options on <a href="https://www.airbnb.com/s/Leesburg--VA--United-States/homes?tab_id=all_tab&refinement_paths%5B%5D=%2Fhomes&query=Leesburg%2C%20VA&place_id=ChIJuzk71YM9tokR873541YPkrE&checkin=2020-08-01&checkout=2020-08-03&adults=2">Airbnb</a> (but book soon, these seem to disappear quickly).
         </div>
       </v-col>
     </v-row>

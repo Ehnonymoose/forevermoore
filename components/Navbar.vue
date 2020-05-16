@@ -63,17 +63,15 @@
         </template>
       </v-row>
 
-      <v-expand-transition>
-        <v-row v-if="showCovidWarning" class="covid-warning mt-1">
-          <div style="width: calc(100% - 84px)" class="d-inline-block my-3 ml-5"> 
-            COVID-19 certainly complicates things, but we are doing everything we can to ensure our wedding will be safe and comfortable for everyone. We still hope to celebrate on August 2nd, but will update you if anything changes.
-          </div>
+      <v-row v-if="showCovidWarning" class="covid-warning mt-1">
+        <div style="width: calc(100% - 84px)" class="d-inline-block my-3 ml-5"> 
+          COVID-19 certainly complicates things, but we are doing everything we can to ensure our wedding will be safe and comfortable for everyone. We still hope to celebrate on August 2nd, but will update you if anything changes.
+        </div>
 
-          <v-btn text v-on:click="hideCovidWarning" height="auto" width="40px" class="d-inline-block">
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-        </v-row>
-      </v-expand-transition>
+        <v-btn text v-on:click="hideCovidWarning" height="auto" width="40px" class="d-inline-block">
+          <v-icon>mdi-close</v-icon>
+        </v-btn>
+      </v-row>
     </v-container>
   </v-sheet>
 </template>
@@ -166,14 +164,21 @@ export default {
   methods: {
     hideCovidWarning() {
       this.showCovidWarning = false;
-      localStorage.showCovidWarning = false;
+      localStorage.covidWarningDismissed = Date.now();
     }
   },
 
   mounted() {
-    // localStorage stores things as strings, so we don't need to worry about this being the boolean value `false`.
-    if (localStorage.showCovidWarning) {
-      this.showCovidWarning = (localStorage.showCovidWarning == "true");
+    if (localStorage.covidWarningDismissed) {
+      const timestamp = Number.parseInt(localStorage.covidWarningDismissed);
+      const dismissed = new Date(timestamp);
+
+      // Show the warning again after an hour.
+      if (Date.now() - dismissed > 1000 * 60 * 60) {
+        this.showCovidWarning = true;
+      } else {
+        this.showCovidWarning = false;
+      }
     } else {
       this.showCovidWarning = true;
     }
