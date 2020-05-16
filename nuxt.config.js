@@ -20,8 +20,8 @@ export default {
     ],
 
     script: [
-      // { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=UA-158183095-1' },
-      // { src: '/analytics.js' }
+      { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=UA-158183095-1' },
+      { src: '/analytics.js' }
     ]
   },
   /*
