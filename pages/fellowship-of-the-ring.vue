@@ -62,7 +62,7 @@ export default {
       altPhoto: "nick-silly.jpg"
     }, {
       side: "groom",
-      position: "Best Woman",
+      position: "First Mate",
       name: "Sabreen Lakhani",
       intro: "<p>Sabreen is my best man, despite not being, in fact, a man. That's just how awesome she is. Pro-tip: don’t attempt to interact with her before she has had her coffee.</p><p>We met in college, where she decided to adopt me and teach me to interact with humans. This was only moderately successful, as you all know, but she did her best. She also introduced me to spicy food. I cried. A lot.</p><p>Nowadays she lives in Seattle, which by some weird coincidence happens to be where I'm moving soon. In her free time, she takes pretty pictures (like my engagement photos), does crazy flips ’n shit, is the strongest woman in Washington (in her weight class), and gets a weird amount of joy out of finding dumb ways to lift other people.</p>",
       photo: "sabreen.jpg",
