@@ -1,80 +1,85 @@
 <template>
   <div>
-    <v-row align="center">
-      <v-col cols="12" sm="6" class="text-center">
-        <div class="travel-header text-center mb-2">Venue</div>
+    <v-row>
+      <v-col cols="12" sm="10" offset-sm="1" class="text-center">
+        <div class="travel-header text-center mb-2" style="font-size: 2rem">Where and When</div>
+
+        <v-img :src="require('static/images/RPM profile photo.png')" :height="400" class="mt-4"></v-img>
+
+        <div class="mt-4 subtitle-1">
+          <a href="https://www.google.com/maps/dir//Raspberry+Plain+Manor,+Agape+Lane,+Leesburg,+VA" style="text-decoration: none; color: black">
+            <b>Raspberry Plain Manor</b><br>
+            16500 Agape Lane, Leesburg, VA 20176
+          </a><br>
+
+          August 2nd, 2020 | 5:00 PM
+        </div>
+        
+      </v-col>
+    </v-row>
+
+    <v-row class="mt-5">
+      <v-col cols="12" sm="6"  order="1" order-sm="0" class="text-center">
+        <div class="travel-header mb-2">Flying</div>
+        
+        <p>There are three major airports in the D.C. area:</p>
         <p>
-          Raspberry Plain Manor<br/>
-          16500 Agape Lane<br />
-          Leesburg, VA 20176
+          <b>Dulles (IAD)</b>: about a 30-minute drive away<br>
+          <b>Reagan (DCA)</b>: about a 60-minute drive away<br>
+          <b>Baltimore (BWI)</b>: about a 90-minute drive away
         </p>
-        <div style="height: 20px"></div>
+        
+        <div style="height: 24px"></div>
+
+        <div class="travel-header mb-2 mt-5" style="margin-top:">FAQ</div>
         <p>
-          August 2nd, 2020<br />
-          Ceremony: 5:00 PM<br />
-          Reception: 6:00 PM
+          <b>May children attend?</b><br>
+          <p>
+            While we love your kids, in order to allow everyone, including parents, an evening of relaxation, we have chosen for our wedding day to be adults only.
+          </p>
+        </p>
+        <br>
+        <p>
+          <b>What’s the dress code?</b><br>
+          <p>
+            We’re not the most formal people, and we’re certainly not about to inflict white- or black-tie attire on people in Virginia in August!
+          </p>
+          <p>
+            That said, please do wear pants (or dresses).
+          </p>
+          </span>
         </p>
       </v-col>
 
-      <v-col cols="12" sm="6">
-        <div class="map-frame">
-          <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.6766346767645!2d-77.55052548470691!3d39.1593358795312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b622baee01a4bb%3A0xa0870bccbae41ab6!2sRaspberry%20Plain%20Manor!5e0!3m2!1sen!2sus!4v1579230960293!5m2!1sen!2sus" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-          </div>
+
+      <v-col cols="12" sm="6" order="0" order-sm="1">
+        <div class="travel-header text-center mb-2">Hotels</div>
+        <div class="text-center">
+          <b>Clarion Hotel Leesburg</b> - &#9733;&#9733;&#9733;<br><br>
+          We have set up a room block under the name: Huang-Moore Wedding.<br>
+          Please <a href="https://www.choicehotels.com/reservations/groups/ca21c6">book online</a> or call <a href="tel:+17037719200">(703) 771-9200</a> to reserve your room.<br><br>
+          The hotel is 5 minutes from our venue, offers a complimentary airport shuttle*, and you can also arrange a complimentary ride to the venue via the front desk.<br>
+          <span class="caption mt-2">*all shuttle services will be contingent upon social distancing restrictions</span>
+        </div>
+
+        <div class="text-center mt-5">
+          <b>Lansdowne Resort and Spa</b> - &#9733;&#9733;&#9733;&#9733;<br><br>
+          A bit further afield (20 minutes from the venue) Lansdowne is an idyllic getaway for those looking to escape the bustle of downtown Leesburg.<br><br>
+          After requesting a hotel block, we concluded that <a href="https://www.lansdowneresort.com/">internet bookings</a> are the best way to get a competitive rate!
+        </div>
+
+        <div class="text-center mt-5">
+          <div class="d-inline-flex align-center" style="margin-bottom: 10px"><b>Airbnb</b>&nbsp;-&nbsp;<img src="images/airbnb.svg" height="24px"></img></div><br>
+          There are also some cute options on <a href="https://www.airbnb.com/s/Leesburg--VA--United-States/homes?tab_id=all_tab&refinement_paths%5B%5D=%2Fhomes&query=Leesburg%2C%20VA&place_id=ChIJuzk71YM9tokR873541YPkrE&checkin=2020-08-01&checkout=2020-08-03&adults=2">AirBnB</a> (but book soon, these seem to disappear quickly).
         </div>
       </v-col>
     </v-row>
 
-    <v-row class="mt-5">
-      <v-col cols="12" sm="4" offset-sm="1">
-        <div class="travel-header text-center mb-2">Flying</div>
-        <p>
-          There are three major airports in the D.C. area:
-          <ul>
-            <li>Dulles (IAD): about a 30-minute drive away</li>
-            <li>Reagan (DCA): about a 60-minute drive away</li>
-            <li>Baltimore (BWI): about a 90-minute drive away</li>
-          </ul>
-        </p>
-        <p>
-          Unfortunately, there isn't really any public transit system in Leesburg, so Uber or a rental car will likely be necessary to get to the venue.
-        </p>
-      </v-col>
-
-      <v-col cols="12" sm="6" offset-sm="1">
-        <div class="travel-header text-center my-2">Hotels</div>
-        <p>
-          We have set up a hotel block with the <a href="https://www.clarioninnleesburg.com/">Clarion Hotel Leesburg</a> (&#9733;&#9733;&#9733;). It is a five-minute drive from the wedding venue, and has a complimentary airport shuttle. 
-        </p>
-        <p>
-          <a href="https://www.lansdowneresort.com/">Lansdowne Resort and Spa</a> (&#9733;&#9733;&#9733;&#9733;) is a more luxurious option. After requesting a hotel block, we concluded that internet bookings are the best way to get a competitive rate!
-        </p>
-        <p>
-          Other options for discounted rates <a href="https://www.hotelplanner.com/15014156/EventPage5841953">are available here</a>. There are also some cute options on <a href="https://www.airbnb.com/s/Leesburg--VA--United-States/homes?tab_id=all_tab&refinement_paths%5B%5D=%2Fhomes&query=Leesburg%2C%20VA&place_id=ChIJuzk71YM9tokR873541YPkrE&checkin=2020-08-01&checkout=2020-08-03&adults=2">AirBnB</a> (but book soon, these seem to disappear quickly).
-        </p>
-      </v-col>
-    </v-row>
-
 
     <v-row class="mt-5">
-      <v-col order="1" order-sm="0" cols="12" sm="6">
+      <v-col cols="12">
         <v-img src="/images/wedding-logo.png" height="200px" contain/>
       </v-col>
-
-      <v-col order="0" order-sm="1" cols="12" sm="6">
-        <div class="travel-header text-center mb-2">FAQ</div>
-        children?
-        <p>
-          In order to allow all guests, including parents, an evening of relaxation, we have chosen for our wedding day to be an adults-only occasion.
-        </p>
-        dress code?
-        <p>
-          pants
-        </p>
-      </v-col>
-    </v-row>
-
-    <v-row align="center" justify="center">
     </v-row>
   </div>
 </template>
