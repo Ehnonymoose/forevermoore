@@ -1,7 +1,7 @@
 <template>
   <v-row align="center" no-gutters>
     <v-col cols="12" sm="8" offset-sm="2">
-      <div class="reply-info">Kindly reply by July 5th. Thank you!</div>
+      <div class="reply-info">Kindly reply by August 15th, 2021. Thank you!</div>
     </v-col>
     <v-col cols="12" sm="8" offset-sm="2" align-content="center">
       <iframe style="display:block;width:100%;height:800px;border:none;overflow:hidden;" 

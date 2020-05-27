@@ -63,15 +63,28 @@
         </template>
       </v-row>
 
-      <v-row v-if="showCovidWarning" class="covid-warning mt-1">
-        <div style="width: calc(100% - 84px)" class="d-inline-block my-3 ml-5"> 
-          COVID-19 certainly complicates things, but we are doing everything we can to ensure our wedding will be safe and comfortable for everyone. We still hope to celebrate on August 2nd, but will update you if anything changes.
-        </div>
-
-        <v-btn text v-on:click="hideCovidWarning" height="auto" width="40px" class="d-inline-block">
-          <v-icon>mdi-close</v-icon>
-        </v-btn>
-      </v-row>
+      <v-dialog v-model="showCovidWarning" max-width="600" persistent class="covid-warning">
+        <v-card>
+          <v-card-title>
+            We've Postponed!
+          </v-card-title>
+          <v-card-text class="subtitle-1">
+            <p>
+              Unfortunately, we have determined that, for everyone's health and safety, it's best to postpone our wedding.
+            </p>
+            <p>
+              The new date will be <b>September 12, 2021</b>.
+            </p>
+            <p>
+              Hope to see you there! &#10084;
+            </p>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="green darken-1" text @click="hideCovidWarning">Okay</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </v-container>
   </v-sheet>
 </template>
@@ -137,7 +150,7 @@
 export default {
   data () {
     return {
-      showCovidWarning: true,
+      showCovidWarning: false,
 
       links: [{
         label: "Home",
@@ -174,7 +187,7 @@ export default {
       const dismissed = new Date(timestamp);
 
       // Show the warning again after an hour.
-      if (Date.now() - dismissed > 1000 * 60 * 60) {
+      if (Date.now() - dismissed > 1000 * 60 * 60 * 4) {
         this.showCovidWarning = true;
       } else {
         this.showCovidWarning = false;

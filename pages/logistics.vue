@@ -12,7 +12,7 @@
             16500 Agape Lane, Leesburg, VA 20176
           </a><br>
 
-          August 2nd, 2020 | 5:00 PM
+          September 12th, 2021 | 5:00 PM
         </div>
         
       </v-col>
@@ -42,7 +42,7 @@
         <p>
           <b>What’s the dress code?</b><br>
           <p>
-            We’re not the most formal people, and we’re certainly not about to inflict white- or black-tie attire on people in Virginia in August!
+            We’re not the most formal people, and we’re certainly not about to inflict white- or black-tie attire on people in Virginia in September!
           </p>
           <p>
             That said, please do wear pants (or dresses).
@@ -55,6 +55,7 @@
       <v-col cols="12" sm="6" order="0" order-sm="1">
         <div class="travel-header text-center mb-2">Hotels</div>
         <div class="text-center">
+          <!--
           <b>Clarion Hotel Leesburg</b> - &#9733;&#9733;&#9733;<br><br>
           We have set up a room block under the name: Huang-Moore Wedding.<br>
           Please <a href="https://www.choicehotels.com/reservations/groups/ca21c6">book online</a> or call <a href="tel:+17037719200">(703) 771-9200</a> to reserve your room.<br><br>
@@ -72,15 +73,23 @@
           <div class="d-inline-flex align-center" style="margin-bottom: 10px"><b>Airbnb</b>&nbsp;-&nbsp;<img src="/images/airbnb.svg" height="24px"></img></div><br>
           There are also some cute options on <a href="https://www.airbnb.com/s/Leesburg--VA--United-States/homes?tab_id=all_tab&refinement_paths%5B%5D=%2Fhomes&query=Leesburg%2C%20VA&place_id=ChIJuzk71YM9tokR873541YPkrE&checkin=2020-08-01&checkout=2020-08-03&adults=2">Airbnb</a> (but book soon, these seem to disappear quickly).
         </div>
+        -->
+
+          In light of the postponement, we are revisiting our hotel options.
+          <br><br>Check back soon!
+        </div>
+        
+        <div class="d-none d-sm-flex" style="height: 150px"></div>
+        <v-img class="d-none d-sm-flex" src="/images/wedding-logo.png" height="200px" contain/>
       </v-col>
     </v-row>
 
-
-    <v-row class="mt-5">
+    <v-row class="mt-5 d-sm-none">
       <v-col cols="12">
         <v-img src="/images/wedding-logo.png" height="200px" contain/>
       </v-col>
     </v-row>
+    
   </div>
 </template>
 
