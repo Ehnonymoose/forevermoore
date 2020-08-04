@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center">
-    <v-col v-for="photo in entry.photos" :key="photo.href" :sm="getPhotoColumns(photo)">
+    <v-col v-for="photo in photos" :key="photo.href" :sm="getPhotoColumns(photo)">
       <v-hover v-slot:default="{ hover }">
         <v-img height="120px" :src="photo.href" contain eager @click="showPhoto(photo.href)">
           <v-fade-transition>
@@ -34,11 +34,11 @@ export default {
       }
 
       // If it doesn't, figure out how many columns are allocated already for this entry.
-      let unallocatedCols = 12 - this.entry.photos.reduce((total, photo) => total + (photo.cols || 0), 0);
+      let unallocatedCols = 12 - this.photos.reduce((total, photo) => total + (photo.cols || 0), 0);
 
       // Then figure out how many photos the unallocated columns need to split up over.
       let unsetPhotos = 0;
-      this.entry.photos.forEach(photo => {
+      this.photos.forEach(photo => {
         if (!photo.cols) {
           unsetPhotos++;
         }

@@ -13,8 +13,8 @@
       </div>
     </v-col>
 
-    <v-col v-if="entry.type === 'highlight'" cols="12">
-      <TimelineHighlightEntry :entry="entry" />
+    <v-col v-if="entry.type === 'highlight'" cols="12" style="padding-top: 0; padding-bottom: 0;">
+      <TimelineHighlightEntry :entry="entry" @showPhoto="showPhoto" />
     </v-col>
 
     <v-col
@@ -47,9 +47,7 @@
               </v-col>
             </v-row>
 
-            <v-row v-if="entry.photos && entry.photos.length > 1" justify="center">
-              <TimelinePhotoGallery v-if="entry.photos && entry.photos.length > 1" :photos="entry.photos" @showPhoto="showPhoto" />
-            </v-row>
+            <TimelinePhotoGallery v-if="entry.photos && entry.photos.length > 1" :photos="entry.photos" @showPhoto="showPhoto" />
           </v-container>
         </v-card-text>
       </v-card>
@@ -129,6 +127,7 @@
 
 <script>
 import TimelineHighlightEntry from "./TimelineHighlightEntry";
+import TimelinePhotoGallery from "./TimelinePhotoGallery";
 
 export default {
   props: {
@@ -144,7 +143,8 @@ export default {
   },
 
   components: {
-    TimelineHighlightEntry
+    TimelineHighlightEntry,
+    TimelinePhotoGallery
   },
 
   computed: {

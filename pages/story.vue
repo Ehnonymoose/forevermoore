@@ -140,7 +140,7 @@ export default {
     }, {
       anchor: "elopement",
       date: "August 2, 2020",
-      title: "The Elopement",
+      title: "So It Begins...",
       position: "middle",
       type: "highlight",
       which: "elopement",

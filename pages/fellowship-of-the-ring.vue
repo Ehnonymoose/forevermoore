@@ -85,7 +85,7 @@ export default {
       side: "bride",
       position: "Bridesmaid",
       name: "Garima Batra",
-      intro: "<p>Garima and Christine met serendiptiously through their common friend Michelle who thought they'd be the best first climbing partners together. From the first class onwards, it was obvious that their crazy was compatible. The belationship took some twists and turns (see what I did there?) and had to keep up with Garima's travels and eventual move to Mexico - but Christine followed en suite! This global friendship has been an amazing one for both and Garima can't WAIT to see Dan and Christine tie the knot in August!</p>",
+      intro: "<p>Garima and Christine met serendiptiously through their common friend Michelle who thought they'd be the best first climbing partners together. From the first class onwards, it was obvious that their crazy was compatible. The belationship took some twists and turns (see what I did there?) and had to keep up with Garima's travels and eventual move to Mexico - but Christine followed en suite! This global friendship has been an amazing one for both and Garima can't WAIT to see Dan and Christine tie the knot!</p>",
       photo: "garima.jpg",
       altPhoto: "garima-silly.jpg"
     }, {

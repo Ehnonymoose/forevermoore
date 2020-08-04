@@ -7,11 +7,9 @@
           <v-img width="100%" :src="entry.mainImage" contain />
         </v-row>
 
-        <v-row class="mt-2">
-          <TimelineProposalEntryContents v-if="entry.which === 'proposal'" />
-          <TimelineElopementEntryContents v-else-if="entry.which === 'elopement'" />
-          <TimelinePhotoGallery v-if="entry.photos" />
-        </v-row>
+        <TimelineProposalEntryContents v-if="entry.which === 'proposal'" />
+        <TimelineElopementEntryContents v-else-if="entry.which === 'elopement'" />
+        <TimelinePhotoGallery v-if="entry.photos" :photos="entry.photos" @showPhoto="showPhoto" />
       </v-container>
     </v-card-text>
   </v-card>
@@ -34,6 +32,18 @@ import TimelinePhotoGallery from "./TimelinePhotoGallery.vue";
 export default {
   props: {
     entry: Object
+  },
+
+  components: {
+      TimelineProposalEntryContents,
+      TimelineElopementEntryContents,
+      TimelinePhotoGallery
+  },
+
+  methods: {
+      showPhoto(id) { 
+          this.$emit("showPhoto", id);
+      }
   }
 }
 </script>
