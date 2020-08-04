@@ -125,10 +125,36 @@ export default {
       text: "<p>Just before Christine broke her ankle, we had signed up for a Tough Mudder race in the area. The typical recovery time for Christine's injury was about seven months, and as luck would have it, there was a Tough Mudder schedule for seven-and-a-half months later in Seattle.</p><p>So, we switched to that race, bought airplane tickets, alerted our friends in the area, and voilà! We had something to look forward to, and to help motivate us to keep going.</p><p>Of course, Dan had some <em>extra</em> plans as well...</p>",
       position: "left"
     }, {
+      anchor: "proposal",
       date: "Sept 21, 2019",
       title: "The Proposal",
       position: "middle",
-      type: "proposal"
+      type: "highlight",
+      which: "proposal",
+      mainImage: "/images/timeline/proposal.jpg"
+    }, {
+      date: "June 2020",
+      title: "Moving to Seattle!",
+      text: "<p>Christine was accepted to business school at the University of Washington, so we were off to the West Coast! After a few months of quarantine we were more than ready to pick up and spend some time somewhere new, so in a frenzied two weeks between Dan's job we moved all the way across the country !</p>",
+      position: "left"
+    }, {
+      anchor: "elopement",
+      date: "August 2, 2020",
+      title: "The Elopement",
+      position: "middle",
+      type: "highlight",
+      which: "elopement",
+      mainImage: "/images/timeline/elopement-running.jpg",
+      photos: [
+        { href: "/images/timeline/elopement-twisty.jpg" },
+        { href: "/images/timeline/elopement-dan.jpg" },
+        { href: "/images/timeline/elopement-lift.jpg" },
+        { href: "/images/timeline/elopement-floof.jpg" },
+        { href: "/images/timeline/elopement-spin.jpg" },
+        { href: "/images/timeline/elopement-sitting.jpg" },
+        { href: "/images/timeline/elopement-group.jpg" },
+        { href: "/images/timeline/elopement-rings.jpg" },
+      ]
     }, {
       date: "To be continued...",
       position: "middle"

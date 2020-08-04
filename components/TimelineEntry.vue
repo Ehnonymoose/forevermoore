@@ -1,7 +1,8 @@
 <template>
-  <v-row align="center">
+  <v-row align="center" :id="entry.anchor">
+    <a v-if="entry.anchor" :name="entry.anchor" />
     <v-col
-      :cols="entry.text ? 1 : 4"
+      :cols="entry.position !== 'middle' ? 1 : 4"
       order-0
       :order-sm="dateOrder"
       class="timeline-date-wrapper text-center"
@@ -12,12 +13,12 @@
       </div>
     </v-col>
 
-    <v-col v-if="entry.type === 'proposal'" cols="12" :style="entryStyle">
-      <TimelineProposalEntry />
+    <v-col v-if="entry.type === 'highlight'" cols="12">
+      <TimelineHighlightEntry :entry="entry" />
     </v-col>
 
     <v-col
-      v-else-if="entry.text"
+      v-else
       :style="entryStyle"
       v-bind="entryProps"
     >
@@ -47,24 +48,7 @@
             </v-row>
 
             <v-row v-if="entry.photos && entry.photos.length > 1" justify="center">
-              <v-col
-                v-for="photo in entry.photos"
-                :key="photo.href"
-                :sm="getPhotoColumns(photo)"
-              >
-                <v-hover v-slot:default="{ hover }">
-                  <v-img height="120px" :src="photo.href" contain eager @click="showPhoto(photo.href)">
-                    <v-fade-transition>
-                      <div
-                        v-if="hover"
-                        class="d-flex transition-fast-in-fast-out white v-card--reveal"
-                        style="height: 100%; opacity: 0.5"
-                      >
-                      </div>
-                    </v-fade-transition>
-                  </v-img>
-                </v-hover>
-              </v-col>
+              <TimelinePhotoGallery v-if="entry.photos && entry.photos.length > 1" :photos="entry.photos" @showPhoto="showPhoto" />
             </v-row>
           </v-container>
         </v-card-text>
@@ -144,7 +128,7 @@
 </style>
 
 <script>
-import TimelineProposalEntry from "./TimelineProposalEntry";
+import TimelineHighlightEntry from "./TimelineHighlightEntry";
 
 export default {
   props: {
@@ -160,7 +144,7 @@ export default {
   },
 
   components: {
-    TimelineProposalEntry
+    TimelineHighlightEntry
   },
 
   computed: {
@@ -168,11 +152,7 @@ export default {
       let classes = [];
 
       if (this.entry.position === "middle") {
-        if (this.entry.text) {
-          classes.push("offset-sm-5");
-        } else {
-          classes.push("offset-4");
-        }
+        classes.push("offset-4");
       }
 
       if (this.first) {
@@ -218,27 +198,6 @@ export default {
   methods: {
     showPhoto(id) {
       this.$emit("showPhoto", id);
-    },
-
-    getPhotoColumns(photo) {
-      // If this photo has a set number of columns, use that.
-      if (photo.cols) {
-        return photo.cols;
-      }
-
-      // If it doesn't, figure out how many columns are allocated already for this entry.
-      let unallocatedCols = 12 - this.entry.photos.reduce((total, photo) => total + (photo.cols || 0), 0);
-
-      // Then figure out how many photos the unallocated columns need to split up over.
-      let unsetPhotos = 0;
-      this.entry.photos.forEach(photo => {
-        if (!photo.cols) {
-          unsetPhotos++;
-        }
-      });
-
-      // Now divide up the unallocated space evenly over those columns.
-      return Math.max(1, Math.floor(unallocatedCols / unsetPhotos));
     }
   }
 }

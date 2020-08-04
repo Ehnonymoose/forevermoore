@@ -3,7 +3,7 @@
     <!-- We will always need at least one vertical bar to connect to the last entry. -->
     <v-col 
       :class="xsClasses" 
-      :cols="start.position === 'middle' ? 2 : 1"
+      :cols="start.position === 'middle' && end.position === 'middle' ? 2 : 1"
       :offset="leftCornerOffset"
     >
       <div :class="leftCornerClasses"></div>
@@ -25,7 +25,7 @@
       </v-col>
 
       <!-- We'll also need a second vertical bar to connect to the next entry. -->
-      <v-col :cols="end.position === 'middle' ? 2 : 1" :class="xsClasses">
+      <v-col :cols="start.position === 'middle' || end.position === 'middle' ? 2 : 1" :class="xsClasses">
         <div :class="rightCornerClasses"></div>
       </v-col>
     </template>
@@ -107,7 +107,7 @@ export default {
     },
 
     leftCornerOffset() {
-      if (this.start.position === 'middle') {
+      if (this.start.position === 'middle' && this.end.position !== 'left') {
         return 5;
       } else if (this.start.position === 'right' && this.end.position === 'right') {
         return 11;

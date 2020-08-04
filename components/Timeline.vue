@@ -53,6 +53,12 @@ export default {
     showPhoto(path) {
       this.galleryImageId = this.allPhotos.findIndex(photo => photo.href === path);
     }
+  },
+
+  mounted: function() {
+    if (this.$route.hash) {
+      this.$nextTick(() => this.$vuetify.goTo(this.$route.hash));
+    }
   }
 }
 </script>
