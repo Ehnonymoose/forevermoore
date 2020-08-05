@@ -135,8 +135,14 @@ export default {
     }, {
       date: "June 2020",
       title: "Moving to Seattle!",
-      text: "<p>Christine was accepted to business school at the University of Washington, so we were off to the West Coast! After a few months of quarantine we were more than ready to pick up and spend some time somewhere new, so in a frenzied two weeks between Dan's job we moved all the way across the country !</p>",
-      position: "left"
+      text: "<p>Christine was accepted to business school at the University of Washington, so we were off to the West Coast! After a few months of quarantine we were more than ready to pick up and spend some time somewhere new, so in the frenzied two weeks while Dan was between jobs, we moved all the way across the country!</p>",
+      position: "left",
+      photos: [
+        { href: "/images/timeline/moving-boxes.jpg" },
+        { href: "/images/timeline/moving-cars.jpg" },
+        { href: "/images/timeline/moving-empty.jpg" },
+        { href: "/images/timeline/moving-plane.jpg" }
+      ]
     }, {
       anchor: "elopement",
       date: "August 2, 2020",

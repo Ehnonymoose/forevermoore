@@ -64,7 +64,7 @@ export default {
       side: "groom",
       position: "First Mate",
       name: "Sabreen Lakhani",
-      intro: "<p>Sabreen is my best man, despite not being, in fact, a man. That's just how awesome she is. Pro-tip: don’t attempt to interact with her before she has had her coffee.</p><p>We met in college, where she decided to adopt me and teach me to interact with humans. This was only moderately successful, as you all know, but she did her best. She also introduced me to spicy food. I cried. A lot.</p><p>Nowadays she lives in Seattle, which by some weird coincidence happens to be where I'm moving soon. In her free time, she takes pretty pictures (like my engagement photos), does crazy flips ’n shit, is the strongest woman in Washington (in her weight class), and gets a weird amount of joy out of finding dumb ways to lift other people.</p>",
+      intro: "<p>Sabreen is my best man, despite not being, in fact, a man. That's just how awesome she is. Pro-tip: don’t attempt to interact with her before she has had her coffee.</p><p>We met in college, where she decided to adopt me and teach me to interact with humans. This was only moderately successful, as you all know, but she did her best. She also introduced me to spicy food. I cried. A lot.</p><p>Nowadays she lives in Seattle, which by some weird coincidence happens to be where I just moved! In her free time, she takes pretty pictures (like my engagement photos), does crazy flips ’n shit, is the strongest woman in Washington (in her weight class), and gets a weird amount of joy out of finding dumb ways to lift other people.</p>",
       photo: "sabreen.jpg",
       altPhoto: "sabreen-silly.jpg"      
     }, {
@@ -106,7 +106,7 @@ export default {
       side: "groom",
       position: "Groomsman",
       name: "Taylor Parsons",
-      intro: "<p>The first time I really hung out with Taylor, we went to a ninja warrior gym, so things definitely got off on the right foot. We've been on trips together to at least nine different states, for climbing, snowboarding, roller coasters, family, and climbing (again). Someday we'll go snowboarding again. 😛</p><p>There have been some weird coincidences connecting us. My parents randomly moved from eastern WA all the way to NC, and ended up across the street from the house he grew up in. Then it turns out that Christine has been a good friend of his now-wife Sharon for a good 20+ years. When we move to Seattle we'll probably end up next door to his cousin or something.</p><p>He is now a professional soap salesman, and is <em>definitely</em> not an alias of Tyler Durden.</p>",
+      intro: "<p>The first time I really hung out with Taylor, we went to a ninja warrior gym, so things definitely got off on the right foot. We've been on trips together to at least nine different states, for climbing, snowboarding, roller coasters, family, and climbing (again). Someday we'll go snowboarding again. 😛</p><p>There have been some weird coincidences connecting us. My parents randomly moved from eastern WA all the way to NC, and ended up across the street from the house he grew up in. Then it turns out that Christine has been a good friend of his now-wife Sharon for a good 20+ years. I half-expected that when we moved to Seattle we'd end up next door to his cousin or something, but that didn't pan out (for once).</p><p>He is now a professional soap salesman, and is <em>definitely</em> not an alias of Tyler Durden.</p>",
       photo: "taylor.jpg",
       altPhoto: "taylor-silly.jpg"
     }, {
