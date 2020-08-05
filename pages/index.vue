@@ -11,7 +11,7 @@
     <v-col cols="6" offset="3" class="text-center my-5">
       <p>Hi everyone!</p>
       <p>We're incredibly excited to get married, and even more excited to share that day with each and every one of you!</p>
-      <p>Please click around a bit to learn more about the celebration (and about us!).</p>
+      <p>Please click around a bit to learn more about the celebration (and about us!)asdfasdfasfasdf.</p>
     </v-col>
 
     <!--

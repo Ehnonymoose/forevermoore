@@ -61,7 +61,7 @@ export default {
     }, {
       date: "Nov 2017",
       title: "First Trip Together!",
-      text: 'We went on our very first big trip together to Seattle! We <a href="/wedding-party">visited Sabreen</a>, had circus adventures, and weren\'t driven apart by the stresses of travelling! This boded well.',
+      text: 'We went on our very first big trip together to Seattle! We <a href="/fellowship-of-the-ring">visited Sabreen</a>, had circus adventures, and weren\'t driven apart by the stresses of travelling! This boded well.',
       position: "right",
       photos: [
         { href: "/images/timeline/seattle-0.jpg" },
