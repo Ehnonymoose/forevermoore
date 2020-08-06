@@ -163,7 +163,8 @@ export default {
       ]
     }, {
       date: "To be continued...",
-      position: "middle"
+      position: "middle",
+      type: "stub"
     }]
   })
 }

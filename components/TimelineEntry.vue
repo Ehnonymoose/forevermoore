@@ -18,7 +18,7 @@
     </v-col>
 
     <v-col
-      v-else
+      v-else-if="entry.type !== 'stub'"
       :style="entryStyle"
       v-bind="entryProps"
     >
