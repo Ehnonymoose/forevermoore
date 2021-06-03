@@ -6,31 +6,36 @@
       <p>Thank you for being part of our lives.</p>
       
       <p>
-        We’re currently going through some BIG life changes - a cross-country move, a new job, grad school (also marriage)...
+        This has been a really hard year for a lot of people, and if you're not in a position to give gifts -
+        or just don't want to - that's totally fine! Your presence at the wedding is more than enough.
       </p>
       <p>
-        So, instead of gift items, we would really appreciate contributions to our honeymoon/newlywed fund to help us jumpstart our new lives together.
+        That said, on top of the impending marriage, we're moving to a new home, and would love some help in settling in. To that end, we have a few registries set up: 
       </p>
+    </v-col>
 
-      <p>For your convenience:</p>
+    <v-col cols="10" offset="1" align="center">
+      <a href="https://www.myregistry.com/wedding-registry/christine-moore-and-daniel-moore-seattle-wa/2869344" class="mr-5">
+        <v-img src="/images/wedding-rings.jpg" class="d-inline-block" width="200px" alt="Link to MyRegistry wedding registry" />
+      </a>
+      <a href="https://www.amazon.com/wedding/share/forevermoore-2020" class="ml-5">
+        <v-img src="/images/amazon-square.png" class="d-inline-block" width="200px" alt="Link to Amazon wedding registry" />
+      </a>
+    </v-col>
+
+    <v-col cols="12" sm="8" offset-sm="2">
+      <p>If you prefer the flexibility of monetary gifts, we're happy with that too!</p>
     </v-col>
     <v-col cols="10" offset="1" align="center">
       <a href="https://venmo.com/Glasir" class="mr-2">
         <v-img src="/images/venmo.png" class="d-inline-block" width="200px" alt="Link to send Venmo gifts" />
       </a>
       <a href="https://www.paypal.me/forevermoore2020" class="ml-2">
-        <v-img src="/images/paypal.png" class="d-inline-block" width="200px" alt="Link to send Venmo gifts" />
+        <v-img src="/images/paypal.png" class="d-inline-block" width="200px" alt="Link to send Paypal gifts" />
       </a>
     </v-col>
     <v-col cols="12" sm="8" offset-sm="2">
-      <p>If you pay with a credit card, both of those sites charge a <b>~3%</b> fee, so please consider sending us your gift directly or bringing it on the wedding day - we love cards!</p>
-      
-      <p>If you prefer to give a more traditional gift, that's great too! We've put together a small registry on <a href="https://www.amazon.com/wedding/share/forevermoore-2020">Amazon</a>:</p>
-    </v-col>
-    <v-col cols="12" align="center">
-      <a href="https://www.amazon.com/wedding/share/forevermoore-2020">
-        <v-img src="/images/amazon-registry.png" width="400px" alt="Link to wedding registry on Amazon" />
-      </a>
+      <p>Note: if you pay with a credit card, both of those sites charge a <b>~3%</b> fee, so please consider sending us your gift directly or bringing it on the wedding day - we love cards!</p>
     </v-col>
 
     <v-col cols="12" sm="8" offset-sm="2">

@@ -62,29 +62,6 @@
           </div>
         </template>
       </v-row>
-
-      <v-dialog v-model="showCovidWarning" max-width="600" persistent class="covid-warning">
-        <v-card>
-          <v-card-title>
-            We've Postponed!
-          </v-card-title>
-          <v-card-text class="subtitle-1">
-            <p>
-              Unfortunately, we have determined that, for everyone's health and safety, it's best to postpone our wedding.
-            </p>
-            <p>
-              The new date will be <b>September 12, 2021</b>.
-            </p>
-            <p>
-              Hope to see you there! &#10084;
-            </p>
-          </v-card-text>
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn color="green darken-1" text @click="hideCovidWarning">Okay</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
     </v-container>
   </v-sheet>
 </template>
@@ -121,7 +98,8 @@
 }
 
 .nav-item-row {
-  margin-top: -12px;
+  margin-top: -12px !important;
+  margin-bottom: 0px !important;
 }
 
 .menu-button {
@@ -150,8 +128,6 @@
 export default {
   data () {
     return {
-      showCovidWarning: false,
-
       links: [{
         label: "Home",
         to: "/"
@@ -171,29 +147,6 @@ export default {
         label: "Registry",
         to: "/registry"
       }]
-    }
-  },
-
-  methods: {
-    hideCovidWarning() {
-      this.showCovidWarning = false;
-      localStorage.covidWarningDismissed = Date.now();
-    }
-  },
-
-  mounted() {
-    if (localStorage.covidWarningDismissed) {
-      const timestamp = Number.parseInt(localStorage.covidWarningDismissed);
-      const dismissed = new Date(timestamp);
-
-      // Show the warning again after an hour.
-      if (Date.now() - dismissed > 1000 * 60 * 60 * 4) {
-        this.showCovidWarning = true;
-      } else {
-        this.showCovidWarning = false;
-      }
-    } else {
-      this.showCovidWarning = true;
     }
   }
 }
