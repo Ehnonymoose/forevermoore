@@ -55,28 +55,22 @@
       <v-col cols="12" sm="6" order="0" order-sm="1">
         <div class="travel-header text-center mb-2">Hotels</div>
         <div class="text-center">
-          <!--
-          <b>Clarion Hotel Leesburg</b> - &#9733;&#9733;&#9733;<br><br>
+          <b>Doubletree of Sterling, VA</b><br>
+
           We have set up a room block under the name: Huang-Moore Wedding.<br>
-          Please <a href="https://www.choicehotels.com/reservations/groups/ca21c6">book online</a> or call <a href="tel:+17037719200">(703) 771-9200</a> to reserve your room.<br><br>
-          The hotel is 5 minutes from our venue, offers a complimentary airport shuttle*, and you can also arrange a complimentary ride to the venue via the front desk.<br>
-          <span class="caption mt-2">*all shuttle services will be contingent upon social distancing restrictions</span>
+          You can <a href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=IADSLDT&groupCode=CDTHMW&arrivaldate=2021-09-11&departuredate=2021-09-13&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT">book online</a> or call <a href="tel:+17032300077">(703) 230-0077</a> to reserve your room.<br>
+          Please book <b>before August 22</b>. A free shuttle from Dulles is available!
         </div>
 
         <div class="text-center mt-5">
-          <b>Lansdowne Resort and Spa</b> - &#9733;&#9733;&#9733;&#9733;<br><br>
-          A bit further afield (20 minutes from the venue) Lansdowne is an idyllic getaway for those looking to escape the bustle of downtown Leesburg.<br><br>
-          After requesting a hotel block, we concluded that <a href="https://www.lansdowneresort.com/">internet bookings</a> are the best way to get a competitive rate!
+          <b>Leesburg hotels</b><br>
+          There are many nice hotels in Leesburg. After requesting hotel blocks at several, we concluded that internet bookings are the best way to get competitive rates!<br>
+          You <i>may</i> be able to get discounted rates <a href="https://www.hotelplanner.com/02345288/EventPage6427188">through our portal.</a>
         </div>
 
         <div class="text-center mt-5">
           <div class="d-inline-flex align-center" style="margin-bottom: 10px"><b>Airbnb</b>&nbsp;-&nbsp;<img src="/images/airbnb.svg" height="24px"></img></div><br>
-          There are also some cute options on <a href="https://www.airbnb.com/s/Leesburg--VA--United-States/homes?tab_id=all_tab&refinement_paths%5B%5D=%2Fhomes&query=Leesburg%2C%20VA&place_id=ChIJuzk71YM9tokR873541YPkrE&checkin=2020-08-01&checkout=2020-08-03&adults=2">Airbnb</a> (but book soon, these seem to disappear quickly).
-        </div>
-        -->
-
-          In light of the postponement, we are revisiting our hotel options.
-          <br><br>Check back soon!
+          There are also some cute options on <a href="https://www.airbnb.com/s/Leesburg--VA/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&adults=2&flexible_trip_dates%5B%5D=august&flexible_trip_dates%5B%5D=july&flexible_trip_lengths%5B%5D=weekend_trip&date_picker_type=calendar&ne_lat=39.1945414654192&ne_lng=-77.56901107072963&sw_lat=39.01390995055963&sw_lng=-77.65298781843057&zoom=13&search_by_map=true&search_type=filter_change&place_id=ChIJuzk71YM9tokR873541YPkrE&checkin=2021-09-11&checkout=2021-09-13&source=structured_search_input_header">Airbnb</a> (but book soon, these seem to disappear quickly).
         </div>
         
         <div class="d-none d-sm-flex" style="height: 150px"></div>
@@ -118,6 +112,10 @@
   position: relative;
   height: 400px;
 
+}
+
+ul.hotel-links {
+  list-style-position: inside;
 }
 </style>
 
