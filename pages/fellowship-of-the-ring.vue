@@ -55,11 +55,11 @@ export default {
   data: () => ({
     party: [{
       side: "bride",
-      position: "Man of Honor",
-      name: "Nick van Aartsen",
-      intro: "<p>Originally just in it for the homemade muffins and beignets, Nick soon realized Christine was an amazing friend as well. At first they bonded over rock climbing, but Christine kept things more interesting and was soon showing him flying trapeze and even a pole dance move or two. Nick would do his best to keep up through all of this.</p><p>On more restful days, the two have enjoyed a particular love for ice creams, cajun food, and board game nights. On slightly less restful days they have also enjoyed scenic hiking routes, including a sunrise trek up old rag. Later, Christine would bring Nick to Mexico to visit their friend Garima and tour ancient pyramids. He was also introduced to Hot Nuts® and micheladas, a transformational experience.</p><p>Nick is incredibly excited for Christine and Dan, and looking forward to visiting them in Seattle.</p>",
-      photo: "nick.jpg",
-      altPhoto: "nick-silly.jpg"
+      position: "Matron of Honor",
+      name: "Michelle Katz",
+      intro: "<p>Christine and Michelle met waaaaay back in high school. Their friendship started in choir class, then grew while eating lunch together, rehearsing in school musicals, and just generally hanging out. Michelle really values all of her good times with Christine after high school too — cooking experiments, hot pot, and most especially girls’ nights in!</p><p>Michelle is super excited for Christine to marry Dan and can’t wait to celebrate them on their big day!</p>",
+      photo: "michelle.jpg",
+      altPhoto: "michelle-silly.jpg"
     }, {
       side: "groom",
       position: "First Mate",
@@ -69,11 +69,11 @@ export default {
       altPhoto: "sabreen-silly.jpg"      
     }, {
       side: "bride",
-      position: "Bridesmaid",
-      name: "Taarika Babu",
-      intro: "My favorite memory of Christine is when I realized that we were going to be lifelong friends! I was a huge anime nerd in high school but had to build up the courage to join the anime club because I didn’t want to be judged. About a month into my freshman year I finally built up the courage to go to a meeting. Christine was one of the first people I saw when I walked in the room. We had a few classes together but hadn’t really talked much outside of pleasantries. Seeing her there instantly put me at ease because I thought she was completely normal (big mistake :P) so I sat next to her and we finally started talking. We became friends pretty much instantly after that anime club meeting and it’s now 15 years later and I can’t believe that I am going to be there to watch her get married 😊",
-      photo: "taarika.jpg",
-      altPhoto: "taarika-silly.jpg"
+      position: "Bridesdude",
+      name: "Nick van Aartsen",
+      intro: "<p>Originally just in it for the homemade muffins and beignets, Nick soon realized Christine was an amazing friend as well. At first they bonded over rock climbing, but Christine kept things more interesting and was soon showing him flying trapeze and even a pole dance move or two. Nick would do his best to keep up through all of this.</p><p>On more restful days, the two have enjoyed a particular love for ice creams, cajun food, and board game nights. On slightly less restful days they have also enjoyed scenic hiking routes, including a sunrise trek up old rag. Later, Christine would bring Nick to Mexico to visit their friend Garima and tour ancient pyramids. He was also introduced to Hot Nuts® and micheladas, a transformational experience.</p><p>Nick is incredibly excited for Christine and Dan, and looking forward to visiting them in Seattle.</p>",
+      photo: "nick.jpg",
+      altPhoto: "nick-silly.jpg"
     }, {
       side: "groom",
       position: "Groomsman",
@@ -84,10 +84,10 @@ export default {
     }, {
       side: "bride",
       position: "Bridesmaid",
-      name: "Garima Batra",
-      intro: "<p>Garima and Christine met serendiptiously through their common friend Michelle who thought they'd be the best first climbing partners together. From the first class onwards, it was obvious that their crazy was compatible. The belationship took some twists and turns (see what I did there?) and had to keep up with Garima's travels and eventual move to Mexico - but Christine followed en suite! This global friendship has been an amazing one for both and Garima can't WAIT to see Dan and Christine tie the knot!</p>",
-      photo: "garima.jpg",
-      altPhoto: "garima-silly.jpg"
+      name: "Taarika Babu",
+      intro: "My favorite memory of Christine is when I realized that we were going to be lifelong friends! I was a huge anime nerd in high school but had to build up the courage to join the anime club because I didn’t want to be judged. About a month into my freshman year I finally built up the courage to go to a meeting. Christine was one of the first people I saw when I walked in the room. We had a few classes together but hadn’t really talked much outside of pleasantries. Seeing her there instantly put me at ease because I thought she was completely normal (big mistake :P) so I sat next to her and we finally started talking. We became friends pretty much instantly after that anime club meeting and it’s now 15 years later and I can’t believe that I am going to be there to watch her get married 😊",
+      photo: "taarika.jpg",
+      altPhoto: "taarika-silly.jpg"
     }, {
       side: "groom",
       position: "Groomsman",
@@ -98,10 +98,10 @@ export default {
     }, {
       side: "bride",
       position: "Bridesmaid",
-      name: "Michelle Katz",
-      intro: "<p>Christine and Michelle met waaaaay back in high school. Their friendship started in choir class, then grew while eating lunch together, rehearsing in school musicals, and just generally hanging out. Michelle really values all of her good times with Christine after high school too — cooking experiments, hot pot, and most especially girls’ nights in!</p><p>Michelle is super excited for Christine to marry Dan and can’t wait to celebrate them on their big day!</p>",
-      photo: "michelle.jpg",
-      altPhoto: "michelle-silly.jpg"
+      name: "Garima Batra",
+      intro: "<p>Garima and Christine met serendiptiously through their common friend Michelle who thought they'd be the best first climbing partners together. From the first class onwards, it was obvious that their crazy was compatible. The belationship took some twists and turns (see what I did there?) and had to keep up with Garima's travels and eventual move to Mexico - but Christine followed en suite! This global friendship has been an amazing one for both and Garima can't WAIT to see Dan and Christine tie the knot!</p>",
+      photo: "garima.jpg",
+      altPhoto: "garima-silly.jpg"
     }, {
       side: "groom",
       position: "Groomsman",

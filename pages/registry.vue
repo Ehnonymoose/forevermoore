@@ -6,11 +6,13 @@
       <p>Thank you for being part of our lives.</p>
       
       <p>
-        This has been a really hard year for a lot of people, and if you're not in a position to give gifts -
-        or just don't want to - that's totally fine! Your presence at the wedding is more than enough.
+        This has been a really hard year for a lot of people, and if you're not in a position to give gifts
+         that's totally fine! Your presence at the wedding is more than enough.
       </p>
       <p>
-        That said, on top of the impending marriage, we're moving to a new home, and would love some help in settling in. To that end, we have a few registries set up: 
+        That said, on top of the impending wedding, we've just  moved to a new home, and would love some help in settling in.
+        Since we won't be able to fit too many items in our suitcases, cash or checks are probably the best gifts to bring to the wedding!
+        However, if you'd prefer a more traditional gift, we do have a few registries set up (with our <i>new</i> address)! 
       </p>
     </v-col>
 
@@ -24,7 +26,7 @@
     </v-col>
 
     <v-col cols="12" sm="8" offset-sm="2">
-      <p>If you prefer the flexibility of monetary gifts, we're happy with that too!</p>
+      <p>Or, if you'd like to go paper-free, that works too!</p>
     </v-col>
     <v-col cols="10" offset="1" align="center">
       <a href="https://venmo.com/Glasir" class="mr-2">

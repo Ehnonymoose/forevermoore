@@ -4,11 +4,12 @@
     <v-card-text class="pb-2">
       <v-container class="pb-0">
         <v-row>
-          <v-img width="100%" :src="entry.mainImage" contain />
+          <v-img width="100%" max-height="800px" :src="entry.mainImage" contain @click="showMainImage" />
         </v-row>
 
         <TimelineProposalEntryContents v-if="entry.which === 'proposal'" />
         <TimelineElopementEntryContents v-else-if="entry.which === 'elopement'" />
+        <TimelineEngagementShootEntryContents v-else-if="entry.which === 'engagement-shoot'" />
         <TimelinePhotoGallery v-if="entry.photos" :photos="entry.photos" @showPhoto="showPhoto" />
       </v-container>
     </v-card-text>
@@ -27,6 +28,7 @@
 <script>
 import TimelineProposalEntryContents from "./TimelineProposalEntryContents.vue";
 import TimelineElopementEntryContents from "./TimelineElopementEntryContents.vue";
+import TimelineEngagementShootEntryContents from "./TimelineEngagementShootEntryContents";  
 import TimelinePhotoGallery from "./TimelinePhotoGallery.vue";
 
 export default {
@@ -37,12 +39,17 @@ export default {
   components: {
       TimelineProposalEntryContents,
       TimelineElopementEntryContents,
+      TimelineEngagementShootEntryContents,
       TimelinePhotoGallery
   },
 
   methods: {
       showPhoto(id) { 
           this.$emit("showPhoto", id);
+      },
+
+      showMainImage() {
+        this.$emit("showPhoto", this.entry.mainImage);
       }
   }
 }

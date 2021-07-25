@@ -162,6 +162,26 @@ export default {
         { href: "/images/timeline/elopement-rings.jpg" },
       ]
     }, {
+      anchor: "engagement-shoot",
+      date: "July 2021",
+      title: "Engagement Shoot",
+      position: "middle",
+      type: "highlight",
+      which: "engagement-shoot",
+      mainImage: "/images/timeline/engagement-sunset.jpg",
+      photos: [
+        { href: "/images/timeline/engagement-column-kiss.jpg" },
+        { href: "/images/timeline/engagement-casual-hug.jpg" },
+        { href: "/images/timeline/engagement-casual-kiss.jpg" },
+        { href: "/images/timeline/engagement-not-a-pregnancy-announcement.jpg" },
+        { href: "/images/timeline/engagement-lift.jpg" },
+        { href: "/images/timeline/engagement-formal-sitting.jpg" },
+        { href: "/images/timeline/engagement-fan.jpg" },
+        { href: "/images/timeline/engagement-hyena.jpg" },
+        { href: "/images/timeline/engagement-formal-walking.jpg" },
+        { href: "/images/timeline/engagement-chipotle.jpg" },
+      ]
+    }, {
       date: "To be continued...",
       position: "middle",
       type: "stub"

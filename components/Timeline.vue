@@ -45,13 +45,23 @@ export default {
   computed: {
     // Gathers all photos in the timeline into a single list, so we can feed it to a carousel.
     allPhotos() {
-      return this.entries.flatMap(entry => entry.photos ? entry.photos : []);
+      return this.entries.flatMap(entry => {
+        let images = entry.photos ? entry.photos : [];
+        if (entry.mainImage) {
+          images = [ { href: entry.mainImage }, ...images ];
+        }
+        return images;
+      });
     }
   },
 
   methods: {
     showPhoto(path) {
+      console.log("Showing photo with path: " + path);
       this.galleryImageId = this.allPhotos.findIndex(photo => photo.href === path);
+      if (this.galleryImageId === -1) {
+        console.log("Failed to find!");
+      }
     }
   },
 
